@@ -14,10 +14,10 @@ const ShowEntries = ({ itemsPerPageOptions, handleChange, itemsPerPage }: ShowEn
     const [nos,setnos]=useState(values[0])
     const color = useSelector((state: RootState) => state.color.color);
 
-
+    // className={`${color === '#353535' ? 'bg-[#353535]' : 'bg-white'} rounded-lg p-4 border`}
     return (
         <div className='flex items-center space-x-2'>
-            <p className={`text-[${color === '#353535' ? 'white'  : '#353535'}]  font-inter font-semibold
+            <p className={`${color === '#353535' ? 'text-white' : 'text-[#353535]'}  font-inter font-semibold
             
             text-[15px] leading-[40px] tracking-[0%]`}>
                 Show
@@ -51,7 +51,7 @@ const ShowEntries = ({ itemsPerPageOptions, handleChange, itemsPerPage }: ShowEn
                 })}
 
             </select> */}
-            <p className={`text-[${color === '#353535' ? 'white'  : '#353535'}] font-inter font-semibold text-[15px] leading-[40px] tracking-[0%]`}>
+            <p className={`${color === '#353535' ? 'text-white' : 'text-[#353535]'} font-inter font-semibold text-[15px] leading-[40px] tracking-[0%]`}>
                 entries
             </p>
         </div>

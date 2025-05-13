@@ -41,6 +41,8 @@ export default function DataTable({
         }
         return arr
     }, [itemsPerPage,data])
+
+    
     return (
         <div className="flex flex-col space-y-4">
             <div className="overflow-x-auto shadow-md sm:rounded-t-lg">

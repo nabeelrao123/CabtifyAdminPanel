@@ -14,7 +14,7 @@ const StatsCard: React.FC<StatsCardProps> = ({ title, value }) => {
 
  
   return (
-    <div className={`bg-[${color === '#353535' ? '#353535' : '#ffffff'}] rounded-lg p-4 border`} >
+    <div className={`${color === '#353535' ? 'bg-[#353535]' : 'bg-white'} rounded-lg p-4 border`} >
       <div className="flex items-center justify-between">
         <div>
           <p
