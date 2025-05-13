@@ -67,9 +67,9 @@ const Sidebar = () => {
     },
 
     {
-      href: '#',
+      href: '/adduser',
       icon: <FaUser size={16} />,
-      label: 'Driver',
+      label: 'Users',
     },
 
     {

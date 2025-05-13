@@ -4,6 +4,8 @@ import Header from '@/components/Header'
 import TextField from '@/components/TextFeild'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
+import { useSelector } from 'react-redux';
+import { AppDispatch, RootState } from '@/app/redux/store'
 export default function Home() {
     const [state, setState] = useState({
         username: '',
@@ -53,11 +55,15 @@ export default function Home() {
 
         e.preventDefault();
     }
+    const color = useSelector((state: RootState) => state.color.color);
+
 
     return (
         <>
             <div className="flex flex-col flex-1 overflow-hidden">
-                <main className="flex-1 overflow-auto p-4 bg-light">
+                <main className={`${color === '#353535' ? 'bg-[#353535] '  : 'bg-ligth'}  
+  
+                flex-1 overflow-auto p-4 bg-light`}>
                     <div className=" block  md:flex gap-x-3 mb-6">
 
                         <div className=" w-[100%] md:w-[30%]">
@@ -96,7 +102,10 @@ export default function Home() {
                         </div>
 
                         <div className='w-[100%] md:w-[70%]'>
-                            <div className="bg-white rounded-lg border h-[400px] border-gray-300 lg:col-span-2">
+                            <div className={`${color === '#353535' ? 'bg-[#353535] '  : 'bg-white'}
+                            
+                            
+                            rounded-lg border h-[400px] border-gray-300 lg:col-span-2`}>
                                 <div className="bg-[#353535] p-4 rounded-lg">
                                     <h3 className="text-lg text-center font-medium text-[#00A699]">Add User Information</h3>
                                 </div>
