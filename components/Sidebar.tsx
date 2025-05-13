@@ -147,7 +147,7 @@ const Sidebar = () => {
           <h1 className="text-3xl font-inter text-white">
             {isCollapsed ? 'C' : (
               <>
-                Ca<span className="text-[#353535]">b</span>tify
+                Ca<span className="text-black  ">b</span>tify
               </>
             )}
           </h1>

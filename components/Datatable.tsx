@@ -47,7 +47,7 @@ export default function DataTable({
         <div className="flex flex-col space-y-4">
             <div className="overflow-x-auto shadow-md sm:rounded-t-lg">
                 <table className=
-                {`bg-[${color === '#353535' ? '#353535 '  : 'white'}]  w-full text-sm text-left  text-${color === '#353535' ? 'white' : 'red-500'} `}>
+                {`${color === '#353535' ? 'bg-[#353535] '  : 'bg-white'}  w-full text-sm text-left  text-${color === '#353535' ? 'white' : 'red-500'} `}>
                     <thead className="text-xs text-[#353535]  bg-[#D4D4D4]">
                         <tr>
                             {columns.map((column) => (

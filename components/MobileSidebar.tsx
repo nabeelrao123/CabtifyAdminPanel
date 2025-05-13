@@ -289,7 +289,7 @@ const MobileSidebar = () => {
     }))
   }
 
-  const navItems: NavItem[] = [
+ const navItems: NavItem[] = [
     { href: '/dashboard', icon: <FaHome size={16} />, label: 'Dashboard' },
     {
       href: '#',
@@ -310,13 +310,13 @@ const MobileSidebar = () => {
       ]
     },
     {
-      href: '#',
+      href: '/wallettopuprequest',
       icon: <IoWalletSharp size={16} />,
       label: 'Wallet',
-      subItems: [
-        { href: '/products/list', icon: <IoWalletSharp size={16} />, label: 'All Products' },
-        { href: '/products/categories', icon: <IoWalletSharp size={16} />, label: 'Categories' }
-      ]
+      // subItems: [
+      //   { href: '/products/list', icon: <IoWalletSharp size={16} />, label: 'All Products' },
+      //   { href: '/products/categories', icon: <IoWalletSharp size={16} />, label: 'Categories' }
+      // ]
     },
 
     {
@@ -336,7 +336,6 @@ const MobileSidebar = () => {
     },
     { href: '/settings', icon: <IoMdSettings size={16} />, label: 'Settings' }
   ]
-
 
   const renderNavItem = (item: NavItem) => {
     const hasSubItems = item.subItems && item.subItems.length > 0

@@ -13,7 +13,7 @@ import { changeColor } from '@/app/redux/colorSlice'
 import { AppDispatch, RootState } from '@/app/redux/store'
 
 const Header = () => {
- const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
+  const [isUserMenuOpen, setIsUserMenuOpen] = useState(false)
   const dispatch = useDispatch<AppDispatch>();
   const toggleColor = (bgColor: string) => dispatch(changeColor(bgColor))
   return (
@@ -106,6 +106,23 @@ const Header = () => {
                   </a>
                 </>)
               })}
+
+
+              <div className='flex items-center justify-center rounded-full ' >
+                <div className='rounded-full bg-[#00A699] px-2 py-1 flex item-center gap-4 ' >
+
+                  <button onClick={() => { toggleColor('#F0F0F0') }} className="w-4 h-4 rounded-full flex items-center justify-center bg-white bg-opacity-20">
+                    <Image
+                      src={group3}
+                      width={16}
+                      height={16}
+                      alt="Light theme icon"
+                      className="text-white"
+                    />
+                  </button>
+                  <button className="bg-[#353535] w-4 h-4 rounded-full  " onClick={() => { toggleColor('#353535') }} ></button>
+                </div>
+              </div>
             </div>
           )}
         </div>
